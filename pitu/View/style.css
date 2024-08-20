@@ -1,0 +1,98 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .carousel-item {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .bg-custom {
+    background-color: rgb(245,245,220); /* Cor Fundo Geral */
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  .navbar-nav .nav-item {
+    margin: 0 25px;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  .navbar-collapse {
+    flex-grow: 1;
+  }
+  .navbar-brand {
+    margin-left: 30px; /* Ajusta a distância da margem esquerda */
+    font-size: 1rem;
+  }
+  .navbar-nav .nav-link {
+    color: white; /* Cor texto inicial */
+    transition: color 0.25s ease; 
+    margin-left: 30px; /* Distancia texto */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: black; /* Cor texto ao passar o mouse */
+  }
+  .btn-custom {
+    /* Cor botão S/ Mouse em cima  */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+  }
+/* Cor botão C/ Mouse em cima */
+  .btn-custom:hover {
+    background-color: rgb(59, 59, 59);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .featurette-heading {
+    font-size: 28px; /* Tamanho Titulo1 */
+  }
+
+  .featurette-heading .text-muted {
+    font-size: 23px; /* Tamanho Subtitulo1 */
+  }
+  .lead {
+    font-size: 16px; /* Tamanho texto1 */
+  }
+  .custom-img1 {
+    width: 205%; /* Tamanho img1 */     
+    height: 290px; /* Ajusta a altura img1 */
+    margin-left: 60px; /* Empurra para a direita img1*/
+  }       
+  .contorno-imagem1 {
+    border: 2px solid rgb(67, 17, 17); /* Contorno img1 */
+  }
+  .texto-meio {
+    text-align: right;
+  }
+    .titulo-meio{
+      text-align: right;
+  }
+  .custom-img2 {   
+    width: 405px; /* Tamanho img2 */ 
+    height: auto; /* Ajusta a altura img2 */
+    margin-right: 100px; /* Empurra para a direita img2*/
+  }       
+  .contorno-imagem2 {
+    border: 2px solid rgb(67, 17, 17); /* Contorno img2 */
+  }
+  .texto-grande {
+    font-size: 11px; 
+    text-align: left;
+  }
