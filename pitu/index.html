@@ -8,25 +8,13 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>FloraYpê Americana</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
-    
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <meta name="theme-color" content="#36412e">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <style>
       .bd-placeholder-img {
@@ -37,159 +25,226 @@
         user-select: none;
       }
 
+      .carousel-item {
+        height: 100px;
+        width: 100px;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
+
+      .bg-custom {
+        background-color: rgb(245,245,220); /* Cor Fundo Geral */
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+      }
+      .navbar-nav .nav-item {
+        margin: 0 25px;
+      }
+      .navbar-toggler {
+        margin-left: auto;
+      }
+      .navbar-collapse {
+        flex-grow: 1;
+      }
     </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
   </head>
-  <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">FloraYpê</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Central I.A</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Plantas/Flores</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
+  <body class="bg-custom"> <!-- Adicione a classe bg-custom aqui para o fundo geral da página -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(82, 121, 72)"> <!-- Cor do "Cabeçalho" -->
+        <div class="container-fluid">
+          <style>
+          .navbar-brand {
+            margin-left: 30px; /* Ajusta a distância da margem esquerda */
+            font-size: 1rem;
+          }
+        </style>
 
+          <a class="navbar-brand" href="#">FloraYpê</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <style>
+            .navbar-nav .nav-link {
+              color: white; /* Cor texto inicial */
+              transition: color 0.25s ease; 
+              margin-left: 30px; /* Distancia texto */
+            }
+          
+            .navbar-nav .nav-link:hover {
+              color: black; /* Cor texto ao passar o mouse */
+            }
+          </style>
+          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>          
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Central IA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Plantas/Flores</a>
+              </li>
+            </ul>
+          </div>
+          
+
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <style>
+                .btn-custom {
+                  /* Cor botão S/ Mouse em cima  */
+                  background-color: rgb(0, 0, 0);
+                  color: rgb(255, 255, 255);
+                  border: 1px solid rgb(255, 255, 255);
+                }
+              /* Cor botão C/ Mouse em cima */
+                .btn-custom:hover {
+                  background-color: rgb(59, 59, 59);
+                  color: rgb(255, 255, 255);
+                  border: 1px solid rgb(255, 255, 255);
+                }
+              </style>
+              
+              <button class="btn btn-custom" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
 <main>
+  <div class="container marketing">
+     <!-- Parte dos Circulos -->
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns=""src="a.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <img src="o.png" type="img/png">
-
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+     <br></br><br></br>
+<div class="row justify-content-center">
+  <div class="col-lg-4 text-center" style="padding-left: 0; padding-right: 40px;">
+    <img src="img/colorido.jpeg" class="bd-placeholder-img rounded-circle" width="190" height="190" alt="Imagem de plantas" style="border: 3px solid rgb(82, 121, 72)">
+    <br><h2>Plantas1</h2>
+    <p>Adicionar Texto1</p>
+    <p><a class="btn btn-secondary" href="#">Veja Mais&raquo;</a></p>
   </div>
 
+  <div class="col-lg-4 text-center" style="padding-left: 0; padding-right: 30px;">
+    <img src="img/rosas.jpeg" class="bd-placeholder-img rounded-circle" width="190" height="190" alt="Imagem relacionada" style="border: 3px solid rgb(82, 121, 72)">
+    <h2>Plantas2</h2>
+    <p>Adicionar Texto2</p>
+    <p><a class="btn btn-secondary" href="#">Veja Mais &raquo;</a></p>
+  </div>
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
+  <div class="col-lg-4 text-center" style="padding-left: 0; padding-right: 20px;">
+    <img src="img/gramado.jpeg" class="bd-placeholder-img rounded-circle" width="190" height="190" alt="Imagem relacionada" style="border: 3px solid rgb(82, 121, 72)">
+    <h2>Plantas3</h2>
+    <p>Adicionar Texto3</p>
+    <p><a class="btn btn-secondary" href="#">Veja Mais &raquo;</a></p>
+  </div>
+</div>
+  
+      <!-- Fim da parte dos Circulos -->
     <hr class="featurette-divider">
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <style>
+          .featurette-heading {
+            font-size: 28px; /* Tamanho Titulo1 */
+          }
+        
+          .featurette-heading .text-muted {
+            font-size: 23px; /* Tamanho Subtitulo1 */
+          }
+        </style>
+
+        <h2 class="featurette-heading"><span style="color: rgb(67, 17, 17);">Quem somos? </span>
+          <span class="text-muted"><span style="color: rgb(110, 43, 43);">O que fazemos?</span></h2>
+        <style>
+          .lead {
+            font-size: 16px; /* Tamanho texto1 */
+          }
+        </style>
+        <span style="color: rgb(95, 32, 32);">Desde 1991 em Americana nos destacamos por nossas variedades e qualidades em nossos produtos!
+          Temos uma ampla escala de produção própria com grande diversidade de plantas ornamentais em Holambra,
+          fazemos de tudo para satisfazer nosso clientes com a grande diversidade de produtos que oferecemos,
+          Atendemos profissionais, lojas e Garden Centers em todo território nacional.<br><br>
+          Nossas criações paisagísticas se destacam pela originalidade e harmonia. Os projetos assinados por LUIZ SELIN são únicos e excepcionais,
+          a realização envolve todo uma estética equilibrada valorizando o estilo abordado para o projeto, a seleção das vegetações são feitas cuidadosamente para valorizar
+          o ambiente e suprir a necessidade do cliente.
+          
       </div>
       <div class="col-md-5">
-        <img src="o.png" class="img-fluid" type="img/png">
 
-
+        <style>
+          .custom-img1 {
+            width: 205%; /* Tamanho img1 */     
+            height: 290px; /* Ajusta a altura img1 */
+            margin-left: 60px; /* Empurra para a direita img1*/
+          }       
+          .contorno-imagem1 {
+            border: 2px solid rgb(67, 17, 17); /* Contorno img1 */
+          }
+        </style>
+        </head>
+        <body class="bg-custom"> <!-- Adicione a classe bg-custom aqui para o fundo geral da página -->
+          <div class="col-md-5">
+            <img src="img/celin.jpg" alt="Imagem com contorno" class="custom-img1 contorno-imagem1">
+          </div>
+        </body>
       </div>
     </div>
-
+    <style>
+      .texto-meio {
+        text-align: right;
+      }
+        .titulo-meio{
+          text-align: right;
+      }
+      </style>
     <hr class="featurette-divider">
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <li style="text-align: right; list-style-type: none;">
+        <h2 class="featurette-heading"><span style="color: rgb(67, 17, 17);">O que é Paisagismo? </span>
+          <span class="text-muted"><span style="color: rgb(110, 43, 43);"> Quais as vantagens?</span></h2>
+        <span style="color: rgb(95, 32, 32);">
+          <p class="texto-meio"
+          >O paisagismo é uma arte que transforma espaços ao ar livre em ambientes funcionais e esteticamente agradáveis,
+          através da combinação de elementos naturais, como plantas e água, cria-se um ambiente harmônico e agradável,
+          a criação dos projetos é pensado para valorizar o ambiente e atender às necessidades dos clientes, seja em áreas residenciais ou comerciais.
+          <br><br>
+          Além de embelezar, o paisagismo também contribui para a preservação do meio ambiente, tornando o espaço muito mais fresco e agradável.
+          A escolha de plantas nativas e o planejamento de áreas verdes ajudam a conservar a biodiversidade e o eco sistema das plantas, sendo muito mais que uma
+          área verde.
       </div>
       <div class="col-md-5 order-md-1">
-        <img src="p.jpg" class="img-fluid" type="img/jpg">
+        <style>
+          .custom-img2 {   
+            width: 405px; /* Tamanho img2 */ 
+            height: auto; /* Ajusta a altura img2 */
+            margin-right: 100px; /* Empurra para a direita img2*/
+          }       
+          .contorno-imagem2 {
+            border: 2px solid rgb(67, 17, 17); /* Contorno img2 */
+          }
+        </style>
+        </head>
+        <body class="bg-custom"> <!-- Adicione a classe bg-custom aqui para o fundo geral da página -->
+          <div class="col-md-5">
+            <img src="img/paisagismo1.jpeg" alt="Imagem com contorno" class="custom-img2 contorno-imagem1">
+          </div>
+        </body>
 
       </div>
     </div>
@@ -203,21 +258,14 @@
       </div>
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
       </div>
     </div>
 
     <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
+ 
   </div><!-- /.container -->
-
-
-
-<!-- Footer -->
-<footer class=" text-center text-white" style="background-color:#3e323c;">
-    <!-- Grid container -->
+ 
+<footer class=" text-center text-white" style="background-color:rgb(54,20,20)"> <!-- Fundo Rodapé Superior -->
     <div class="container p-4">
   
      
@@ -225,9 +273,9 @@
   
       <!-- Section: Text -->
       <section class="mb-4">
-        <p>
-            A Flora Ypê oferece projetos e execução de Paisagismo, Green Wall, além de produzir variedades de Plantas Ornamentais em Holambra e estar presente no Mercado de Flores do CEASA Campinas.
-
+        <p style="text-decoration: none; font-size: 15px; ">A Flora Ypê, com a expertise dos agrônomos Luiz Celin e Henrique Celin, oferece projetos de paisagismo personalizados, 
+            produção de mudas em Holambra e uma loja completa para todos os seus projetos, seja residencial, 
+            industrial ou rural, também está presente no Mercado de flores do CEASA Campinas.
         </p>
       </section>
       <!-- Section: Text -->
@@ -246,15 +294,16 @@
             
             
               <li style="text-align: left;">
-                Instagram: 
-                <a href="https://www.instagram.com/floraypepaisagismo/" 
-                target="_blank" class="text-white" style="text-decoration: none;">@floraypepaisagismo</a>
-                <!-- color: #FF5733; Não esta dando para trocar de cor no link -->
+                <span style="color: rgb(169,169,169);">Instagram: </br></span> 
+                <a href="https://www.instagram.com/floraypepaisagismo/"
+                target="_blank" class="text-white" style="text-decoration: none; font-size: 13px;"><p>@floraypepaisagismo</a>
+                <br>
               </li>
+              
               <li style="text-align: left;">
-                Whatsapp: 
-                <a href="https://api.whatsapp.com/send/?phone=55993890300&text=Ol%C3%A1%2C+FLORA+YPE%2C+estou+entrando+em+contato+atrav%C3%A9s+do+site+de+voc%C3%AAs.+&type=phone_number&app_absent=0" 
-                target="_blank" class="text-white" style="text-decoration: none;">+55 19 99389-0300</a>
+                <span style="color: rgb(169,169,169);">WhatsApp: </span></br></span>
+                <a href="https://w.app/HGcbC7" 
+                target="_blank" class="text-white" style="text-decoration: none; font-size: 13px; ">+55 19 99389-0300</a>
               </li>
               
               <li>
@@ -266,63 +315,58 @@
             </ul>
           </div>
           <!--Grid column-->
-  
-          <!--Grid column-->
+
+          <style>
+            .texto-grande {
+              font-size: 11px; 
+              text-align: left;
+            }
+            </style>
+
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase"></h5>
-  
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-0" style="text-align: left;">
               <li>
-                Holambra <li>
-                  Sítio Santa Terezinha
-                </li>
-              (19) 99781-8455
+                <a href="https://www.google.com/maps/@-22.7556347,-47.3547927,3a,90y,66.08h,87.35t/data=!3m7!1e1!3m5!1smnjqDYz_l5vB69oEhotzEg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.649253731343279%26panoid%3DmnjqDYz_l5vB69oEhotzEg%26yaw%3D66.07745766169155!7i16384!8i8192?coh=205410&entry=ttu" target="_blank" style="color: rgb(169,169,169); text-decoration: none; font-size: 15px;">
+                  Americana - São Paulo
+                </a>
               </li>
+              <li class="texto-grande">Rua Itabirito, N° 1227</li>
+              <li class="texto-grande">Segunda a Sexta das 8h às 11h</li>
+              <li class="texto-grande">às 12h às 17h</li>
+              <li class="texto-grande">Sábado das 9h às 13h</li>
+              <li class="texto-grande">+55 (19) 3013-2931</li>
             </ul>
           </div>
           <!--Grid column-->
-  
+          
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase"></h5>
-  
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-0" style="text-align: left;">
               <li>
+                <a href="" target="_blank" style="color: rgb(169,169,169); text-decoration: none; font-size: 15px;">
+                  Ceasa Campinas - São Paulo
+                </a>
               </li>
-              <li>
-                Ceasa Campinas
-              </li>
-              <li>
-                Mercado de Flores
-                Box N18 e N19
-              </li>
-              <li>
-                de segunda à quinta-feira
-              </li>
-              <li>
-                (19) 3746-1929
-              </li>
+              <li class="texto-grande">Box números N18 e N19</li>
+              <li class="texto-grande">Segunda à Quinta-feira</li>
+              <li class="texto-grande">+55 (19) 3746-1929</li>
             </ul>
           </div>
           <!--Grid column-->
-  
+          
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase"></h5>
-  
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-0" style="text-align: left;">
               <li>
-                Americana
-              
+                <a href="https://maps.app.goo.gl/aiiM5UwqBHwJTrXD9" target="_blank" style="color: rgb(169,169,169); text-decoration: none; font-size: 15px;">
+                  Holambra - São Paulo
+                </a>
               </li>
-              Rua Itabirito, 1227
-              <li>
-                segunda a sexta das 8h às 11h e das 12h às 17h
-                sábados das 9h às 13h
-              </li>
-              (19) 3013-2931
-              <li>
-              
+              <li class="texto-grande">Sítio Santa Terezinha</li>
+              <li class="texto-grande">+55 (19) 99781-8455</li>
             </ul>
           </div>
           <!--Grid column-->
@@ -335,26 +379,13 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2024 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"> © 2024 Flora Ypê. Todos os direitos reservados.  Site desenvolvido pelo: PITU</a>
+    <div class="text-center p-3" style="background-color: rgb(0, 0, 0)">
+      <a style="color: rgb((54,54,54)); text-decoration: none; font-size: 15px;">© 2024 Copyright: © 2024 Flora Ypê. Todos os direitos reservados.  Site desenvolvido pelo: PITU</a>
     </div>
     <!-- Copyright -->
   
   </footer>
-  <!-- Footer -->
-  <!-- FOOTER 
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <center>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-</center>
-  </footer>
--->
-</main>
-
-
-
-      
+</main> 
   </body>
 </html>
+
