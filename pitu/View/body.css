@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,7 +8,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(245, 245, 220); /* Fundo */
+    background-color: rgb(245, 245, 220);
+    /* Fundo */
 }
 
 main {
@@ -21,14 +23,15 @@ main {
     width: 300%;
 }
 
-.lado-esquerdo, .lado-direito {
+.lado-esquerdo,
+.lado-direito {
     flex: 1;
     padding: 10px;
 }
 
 /* .lado-esquerdo {
     border-right: 1px solid #ccc; /* Linha divisória entre os lados */
-/* } */ 
+/* } */
 
 footer {
     background-color: rgb(56, 82, 49);
@@ -40,7 +43,7 @@ footer {
     bottom: 0;
 }
 
-.text-termo{
+.text-termo {
     text-align: left;
     font-size: 30px;
     padding-left: 20px
@@ -56,7 +59,8 @@ footer {
 
 .rodape-inferior {
     background-color: rgb(56, 82, 49);
-    padding: 1px ; /* Corrigido para adicionar mais espaço ao redor do texto */
+    padding: 1px;
+    /* Corrigido para adicionar mais espaço ao redor do texto */
     text-align: center;
 }
 
@@ -66,9 +70,9 @@ footer {
     font-weight: bold;
 }
 
-.Subtitulo-termo{
+.Subtitulo-termo {
     font-size: 16px;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-weight: bold;
 
 }
@@ -76,7 +80,7 @@ footer {
 .Texto-termo {
     font-size: 16px;
     color: rgb(0, 0, 0);
-    
+
 }
 
 .minha-lista {
