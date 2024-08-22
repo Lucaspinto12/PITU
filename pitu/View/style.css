@@ -5,12 +5,6 @@
     -moz-user-select: none;
     user-select: none;
 }
-
-.carousel-item {
-    height: 100px;
-    width: 100px;
-}
-
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -124,9 +118,22 @@
     /* Contorno img2 */
 }
 
+.text-color{
+    font-size: 17px;
+    color: rgb(95, 32, 32);
+    text-decoration: none;
+    display: inline-block;
+}
+
 .texto-grande {
-    font-size: 11px;
+    font-size: 14px;
     text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.cabeçalho-inferior{
+    background-color: rgb(56, 82, 49);
+    padding: 8px 0;
 }
 
 /* Estilo da mini tela */
