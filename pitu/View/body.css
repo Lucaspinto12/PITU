@@ -1,0 +1,85 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 220); /* Fundo */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 300%;
+}
+
+.lado-esquerdo, .lado-direito {
+    flex: 1;
+    padding: 10px;
+}
+
+/* .lado-esquerdo {
+    border-right: 1px solid #ccc; /* Linha divisória entre os lados */
+/* } */
+
+footer {
+    background-color: rgb(56, 82, 49);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.text-termo {
+    text-align: left;
+    font-size: 30px;
+    padding-left: 20px
+}
+
+.termos-de-uso {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(59, 59, 59, 0.988);
+}
+
+.rodape-inferior {
+    background-color: rgb(56, 82, 49);
+    padding: 1px; /* Corrigido para adicionar mais espaço ao redor do texto */
+    text-align: center;
+}
+
+.Titulo-termo {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.Subtitulo-termo {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+}
+
+.Texto-termo {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+
+}
+
+.minha-lista {
+    list-style-type: none;
+    padding-left: 22px;
+}
