@@ -1,5 +1,4 @@
-html,
-body {
+html,body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,8 +7,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(245, 245, 220);
-    /* Fundo */
+    background-color: rgb(245, 245, 220); /* Fundo */
 }
 
 main {
@@ -23,8 +21,7 @@ main {
     width: 300%;
 }
 
-.lado-esquerdo,
-.lado-direito {
+.lado-esquerdo, .lado-direito {
     flex: 1;
     padding: 10px;
 }
@@ -59,8 +56,7 @@ footer {
 
 .rodape-inferior {
     background-color: rgb(56, 82, 49);
-    padding: 1px;
-    /* Corrigido para adicionar mais espaço ao redor do texto */
+    padding: 1px; /* Corrigido para adicionar mais espaço ao redor do texto */
     text-align: center;
 }
 

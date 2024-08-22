@@ -1,3 +1,5 @@
+/* Pagina Home */
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -12,8 +14,7 @@
 }
 
 .bg-custom {
-    background-color: rgb(245, 245, 220);
-    /* Cor Fundo Geral */
+    background-color: rgb(245, 245, 220); /* Cor Fundo Geral */
 }
 
 .navbar-nav {
@@ -35,22 +36,18 @@
 }
 
 .navbar-brand {
-    margin-left: 30px;
-    /* Ajusta a distância da margem esquerda */
+    margin-left: 30px; /* Ajusta a distância da margem esquerda */
     font-size: 1rem;
 }
 
 .navbar-nav .nav-link {
-    color: white;
-    /* Cor texto inicial */
+    color: white; /* Cor texto inicial */
     transition: color 0.25s ease;
-    margin-left: 30px;
-    /* Distancia texto */
+    margin-left: 30px; /* Distancia texto */
 }
 
 .navbar-nav .nav-link:hover {
-    color: black;
-    /* Cor texto ao passar o mouse */
+    color: black; /* Cor texto ao passar o mouse */
 }
 
 .btn-custom {
@@ -68,32 +65,25 @@
 }
 
 .featurette-heading {
-    font-size: 28px;
-    /* Tamanho Titulo1 */
+    font-size: 28px; /* Tamanho Titulo1 */
 }
 
 .featurette-heading .text-muted {
-    font-size: 23px;
-    /* Tamanho Subtitulo1 */
+    font-size: 23px; /* Tamanho Subtitulo1 */
 }
 
 .lead {
-    font-size: 16px;
-    /* Tamanho texto1 */
+    font-size: 16px; /* Tamanho texto1 */
 }
 
 .custom-img1 {
-    width: 205%;
-    /* Tamanho img1 */
-    height: 290px;
-    /* Ajusta a altura img1 */
-    margin-left: 60px;
-    /* Empurra para a direita img1*/
+    width: 205%; /* Tamanho img1 */
+    height: 290px; /* Ajusta a altura img1 */
+    margin-left: 60px; /* Empurra para a direita img1*/
 }
 
 .contorno-imagem1 {
-    border: 2px solid rgb(67, 17, 17);
-    /* Contorno img1 */
+    border: 2px solid rgb(67, 17, 17); /* Contorno img1 */
 }
 
 .texto-meio {
@@ -105,17 +95,13 @@
 }
 
 .custom-img2 {
-    width: 405px;
-    /* Tamanho img2 */
-    height: auto;
-    /* Ajusta a altura img2 */
-    margin-right: 100px;
-    /* Empurra para a direita img2*/
+    width: 405px; /* Tamanho img2 */
+    height: auto; /* Ajusta a altura img2 */
+    margin-right: 100px; /* Empurra para a direita img2*/
 }
 
 .contorno-imagem2 {
-    border: 2px solid rgb(67, 17, 17);
-    /* Contorno img2 */
+    border: 2px solid rgb(67, 17, 17); /* Contorno img2 */
 }
 
 .text-color{
@@ -149,13 +135,11 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    display: none;
-    /* Inicialmente oculto */
+    display: none; /* Inicialmente oculto */
 }
 
 #mini-tela.mostrar {
     display: flex;
-    /* Mostra a mini tela quando a classe é adicionada */
 }
 
 .mini-tela-conteudo {
@@ -199,15 +183,13 @@
 
 .elemento-alinhado-input {
     margin-left: 40px;
-    align-items: center;
-    /* Ajusta o espaçamento em relação ao elemento acima */
+    align-items: center; /* Ajusta o espaçamento em relação ao elemento acima */
 }
 
 .elemento-titulo {
     margin-top: 08px;
     margin-bottom: 01px;
-    text-align: center;
-    /* Margem abaixo do cabeçalho */
+    text-align: center; /* Margem abaixo do cabeçalho */
 }
 
 .elemento-texto-link {
@@ -231,6 +213,6 @@
 }
 #elemento-alinhado {
     margin-top: 10px;
-    align-items: center;
-    /* Ajusta o espaçamento em relação ao elemento acima */
+    align-items: center; /* Ajusta o espaçamento em relação ao elemento acima */
 }
+
