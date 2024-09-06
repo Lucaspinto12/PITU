@@ -40,6 +40,7 @@
 .navbar-brand {
     margin-left: 30px; /* Ajusta a distância da margem esquerda */
     font-size: 1rem;
+    color: rgb(43, 213, 43);
 }
 
 .navbar-nav .nav-link {
@@ -85,7 +86,7 @@
 }
 
 .contorno-imagem1 {
-    border: 2px solid rgb(67, 17, 17); /* Contorno img1 */
+    border: 2px solid rgb(0, 0, 0); /* Contorno img1 */
 }
 
 .texto-meio {
@@ -108,7 +109,7 @@
 
 .text-color{
     font-size: 17px;
-    color: rgb(95, 32, 32);
+    color: rgb(115, 14, 14);
     text-decoration: none;
     display: inline-block;
 }
@@ -131,12 +132,16 @@
     width: 100%;
     height: 100%;
     color: rgb(245, 245, 220);
-    background: rgba(0, 0, 0, 0.866);
+    background-color: rgb(0,0,0,0.950);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     display: none; /* Inicialmente oculto */
+    /*background-image: url('img/fundo.jpeg'); /* Adiciona a imagem de fundo */
+    /*background-size: cover; /* Faz a imagem cobrir todo o elemento */
+    /*background-position: center; /* Centraliza a imagem no fundo */
+    /*background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
 #mini-tela.mostrar {
@@ -148,13 +153,28 @@
     padding: 0px;
     border-radius: 18px;
     position: relative;
-    width: 310px; /* Ajuste na largura */
-    height: 200px; /* Ajuste na altura */
+    width: 300px; /* Ajuste na largura */
+    height: 220px; /* Ajuste na altura */
     max-width: 500px;/* Limite máximo da largura */
     box-sizing: border-box;/* Garante que o padding não aumente a largura total */
 }
+.cabeçalho1{
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    margin-left: 50px;
+    margin-top: -13px;
+}
 
 .cabecalho {
+    background-color: rgb(1, 60, 1);
+    padding: 20px;
+    width: 100%;
+    height: 10px;
+    border-radius: 16px 16px 0 0;
+    box-sizing: border-box;
+}
+
+.cabecalho-inferior{
     background-color: rgb(1, 60, 1);
     padding: 20px;
     width: 100%;
@@ -182,26 +202,34 @@
     font-size: 17px;
 }
 
-.elemento-alinhado-input {
-    margin-left: 40px;
-    align-items: center; /* Ajusta o espaçamento em relação ao elemento acima */
+.error{
+    font-size: 13px;
+    color: rgb(235, 12, 12);
+    margin-left: 10px;
+    margin-top: 5px;
+    width: fit-content; /* Ajusta a largura com base no conteúdo */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    display: inline-block;
 }
 
-.elemento-titulo {
-    margin-top: 08px;
-    margin-bottom: 01px;
-    text-align: center; /* Margem abaixo do cabeçalho */
+.elemento-alinhado-input {
+    margin-left: 25px;
+    margin-top: -60px;
 }
 
 .elemento-texto-link {
     margin-top: 20px;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    margin-left: 15px;
+    align-items: left;
+    font-size: 15px;
+
 }
 .elemento-texto {
-    margin-top: 60px;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    margin-left: 14px;
+    align-items: left;
+    font-size: 15px;
 }
 
 .oculto {
