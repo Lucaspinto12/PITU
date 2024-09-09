@@ -17,46 +17,47 @@
     box-sizing: border-box; 
 }
 
-.imagens-selin {
+.imagens-paisa {
     display: flex;
     justify-content: center; 
-    gap: 40px; /* Espaçamento imagens */
-    margin-bottom: 20px; 
-    
-    
+    gap: 30px; /* Espaçamento imagens */
+    margin-bottom: 20px;  
 }
 
 .imagens-selin-baixo {
     display: flex;
     justify-content: center; 
-    gap: 60px; /* Espaçamento imagens */
+    gap: 120px; /* Espaçamento imagens */
     margin-bottom: -30px; 
-  
 }
 
 .imagens-selin-baixo1 {
     display: flex;
     justify-content: center; 
-    gap: 60px; /* Espaçamento imagens */
+    gap: 120px; /* Espaçamento imagens */
     margin-bottom: 10px; 
-   
-}
-
-.imagem {
-    margin-top: 70px;
-    width: 270px; /* Largura */
-    height: 220px; /* Altura */
-    object-fit: cover; 
-    border-radius: 5px;
 }
 
 .imagem-baixo {
     margin-top: 70px;
-    width: 320px; /* Largura */
-    height: 300px; /* Altura */
+    width: 260px; /* Largura */
+    height: 260px; /* Altura */
     object-fit: cover; 
-    
-    
+}
+
+.imagem-pais {
+    width: 380px; /* Largura */
+    height: 250px; /* Altura */
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.imagem-paisa {
+    margin-top: -20px;
+    width: 380px; /* Largura */
+    height: 250px; /* Altura */
+    object-fit: cover; 
+    border-radius: 5px;
 }
 
 .container {
