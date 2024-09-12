@@ -39,8 +39,13 @@
 
 .navbar-brand {
     margin-left: 30px; /* Ajusta a distância da margem esquerda */
-    font-size: 1rem;
-    color: rgb(30, 203, 30);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.navbar-brand:hover{
+    color: black;
 }
 
 .navbar-nav .nav-link {
@@ -86,7 +91,8 @@
 }
 
 .contorno-imagem1 {
-    border: 2px solid rgb(0, 0, 0); /* Contorno img1 */
+    border: 2px solid rgb(255, 255, 255); /* Contorno img1 */
+    border-radius: 5px;
 }
 
 .texto-meio {
