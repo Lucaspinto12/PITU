@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>FloraYpê Luiz Selin - Biólogo Paisagista</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="subpagina.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#36412e">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+
+<body class="bg-custom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(82, 121, 72)">
+            <!-- Cor do "Cabeçalho" -->
+            <div class="container-fluid">
+
+
+              <a class="navbar-brand" href="Home.html#">FloraYpê</a> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html#" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <nav>
+                                <a class="nav-link active" href="#" id="central-ia">Central IA</a>
+                            </nav>
+
+                            <div id="mini-tela">
+                                <div class="mini-tela-conteudo">
+                                    <div class="cabecalho">
+                                        <h1 class="cabeçalho1">Insira seu Código</h1>
+                                        <span id="fechar" class="fas fa-arrow-left" style="cursor: pointer;"></span>
+                                    </div>
+
+                                    <div>
+                                        <p class="elemento-texto-link" style="color: rgb(0, 0, 0);">
+                                            <input type="checkbox" name="opcao1" id="aceitar-termos" value="valor1">
+                                            Li e estou de acordo com o
+                                            <a href="Untitled-1.html" target="_blank" class="elemento-texto">
+                                                <br>Termo de Uso e Política de Privacidade
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                    <input type="text" id="codigo-input" placeholder="Digite o código aqui"
+                                        class="elemento-alinhado-input">
+                                    <button id="enviar" class="botão">Enviar</button>
+
+                                    <!-- Mensagem de erro -->
+                                    <p id="mensagem-erro" class="error" style="display: none;">
+                                        Você deve aceitar os Termos de Uso e Política de
+                                        <br>Privacidade para continuar.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <script>
+                                // Abre a mini-tela
+                                document.getElementById('central-ia').addEventListener('click', function () {
+                                    document.getElementById('mini-tela').classList.add('mostrar');
+                                    document.getElementById('mini-tela').classList.remove('oculto');
+                                });
+
+                                // Fecha a mini-tela, limpa os campos e oculta o modal
+                                document.getElementById('fechar').addEventListener('click', function () {
+                                    // Limpa o campo de texto
+                                    document.getElementById('codigo-input').value = '';
+
+                                    // Desmarca o checkbox
+                                    document.getElementById('aceitar-termos').checked = false;
+
+                                    // Esconde a mensagem de erro, se estiver visível
+                                    document.getElementById('mensagem-erro').style.display = 'none';
+
+                                    // Fecha a mini-tela
+                                    document.getElementById('mini-tela').classList.remove('mostrar');
+                                    document.getElementById('mini-tela').classList.add('oculto');
+                                });
+
+                                // Validação ao clicar em Enviar
+                                document.getElementById("enviar").addEventListener("click", function (event) {
+                                    const termosAceitos = document.getElementById("aceitar-termos").checked;
+                                    const mensagemErro = document.getElementById("mensagem-erro");
+
+                                    if (!termosAceitos) {
+                                        mensagemErro.style.display = "block"; // Mostra a mensagem de erro
+                                        event.preventDefault(); // Impede o envio
+                                    } else {
+                                        mensagemErro.style.display = "none"; // Esconde a mensagem de erro
+                                        // Aqui você pode colocar o código para enviar o formulário se necessário
+
+                                        // Limpa o campo de texto ao enviar
+                                        document.getElementById('codigo-input').value = '';
+                                        document.getElementById('aceitar-termos').checked = false;
+                                    }
+                                });
+                            </script>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="planta.html">Plantas/Flores</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <form class="d-flex">
+
+
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-custom" type="submit"><i class="bi bi-search"
+                            style="font-size: 17px; color: rgb(238, 240, 243)"></i>
+                    </button>
+
+                </form>
+            </div>
+            </div>
+        </nav>
+    </header>
+  
+    </main>
+
+    <section class="texto-tela">
+        <div class="container">
+            <h2 class="titulo"><br>Luiz Benedito Selin – Biólogo Paisagista</h2>
+            <p class="descricao">
+                Apaixonado por Botânica, Luiz Selin veio ao mundo em uma fazenda em Santa Maria Da Serra, interior de São Paulo. 
+                Desde os 4 anos, ele se divertia plantando sementes em um pequeno jardim no quintal de sua residência. 
+                Com 15 anos, ingressou no curso de Técnico Agropecuário em Regime de Internato.<br>
+                <br>
+                Formado em Biologia, Luiz se especializou em Botânica. Sempre em busca de mais conhecimento, realizou cursos de paisagismo em renomados jardins ao redor do mundo, 
+                como Royal Botanic Garden Kew na Inglaterra, Royal Botanic Garden Endburg em 1992, New York Botanic Garden em 1993, Allmer Holand em 1995, Royal Botanic Garden Sydney em 1997, 
+                além de ter se especializado na produção de plantas em Osaka, no Japão, e no Jardim de Coimbra em 2001. 
+                De volta ao Brasil, Luiz desenvolveu um projeto paisagístico em uma fazenda em Minas Gerais, 
+                o qual resultou na conclusão de sua pós-graduação em Paisagismo de Plantas Ornamentais em 2007.<br>
+                <br>
+                Sempre de olho nas novidades do mercado, no ano de 2013 esteve presente na RHS Chelsea Flower Show, um evento de jardinagem e 
+                paisagismo que aconteceu na 100ª edição em Londres, na Inglaterra, onde pôde conhecer os principais paisagistas e botânicos renomados do mundo.<br>
+                <br>
+                Uma menção honrosa para estas pessoas que ajudaram na carreira de Luis Benedito Selin:
+            </p>
+        </div>
+        <br><br>
+       
+        
+
+        <div class="imagens-selin-baixo">
+            <div class="imagem-container">
+                <img src="img/keith.jpg" alt="Imagem 1" class="imagem-baixo contorno-img">
+                <p class="texto-imagem">Keith Lloyd</p>
+            </div>
+            <div class="imagem-container">
+                <img src="img/gerard.jpg" alt="Imagem 2" class="imagem-baixo contorno-img">
+                <p class="texto-imagem">Gerard Miller</p>
+            </div>
+            <div class="imagem-container">
+                <img src="img/sarah.jpg" alt="Imagem 3" class="imagem-baixo contorno-img">
+                <p class="texto-imagem">Sarah Davis</p>
+            </div>
+            <div class="imagem-container">
+              <img src="img/ian.jpg" alt="Imagem 4" class="imagem-baixo contorno-img">
+              <p class="texto-imagem">Ian Leese</p>
+          </div>
+          <div class="imagem-container">
+            <img src="img/mary.jpg" alt="Imagem 5" class="imagem-baixo contorno-img">
+            <p class="texto-imagem">Mary Done</p>
+        </div>
+        <div class="imagem-container">
+            <img src="img/ernest.jpg" alt="Imagem 6" class="imagem-baixo contorno-img">
+            <p class="texto-imagem">Ernest Demarie</p>
+        </div>
+
+        </div>
+    </div>
+    <br>
+
+</section>
+
+    <footer class=" text-center text-white" style="background-color:rgb(239, 239, 186)"> <!-- Fundo Rodapé Superior -->
+        <div class="container p-4">
+  
+          <section class="mb-4">
+            <p style="text-decoration: none; font-size: 15.9px; color: rgb(0, 0, 0)">A Flora Ypê, com a expertise dos agrônomos Luiz Celin e
+              Henrique Celin, oferece projetos de paisagismo personalizados,
+              produção de mudas em Holambra e uma loja completa para todos os seus projetos, seja residencial,
+              industrial ou rural, também está presente no Mercado de flores do CEASA Campinas.
+            </p>
+          </section>
+  
+          <section class="">
+          
+            <div class="row">
+           
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+  
+                <ul class="list-unstyled mb-0">
+  
+                  <li style="text-align: left;">
+                    <span class="text-color">Instagram: </br></span>
+                    <a href="https://www.instagram.com/floraypepaisagismo/" target="_blank" class="texto-grande"
+                      style="text-decoration: none; font-size: 15px;">
+                      <p>@floraypepaisagismo
+                    </a>
+                    <br>
+                  </li>
+  
+                  <li style="text-align: left;">
+                    <span class="text-color">WhatsApp: </span></br></span>
+                    <a href="https://api.whatsapp.com/send/?phone=5519993890300&text=Ol%C3%A1%2C+FLORA+YPE%2C+
+                    estou+entrando+em+contato+atrav%C3%A9s+do+site+de+voc%C3%AAs.+&type=phone_number&app_absent=0" target="_blank" class="texto-grande"
+                      style="text-decoration: none; font-size: 15px; ">+55 19 99389-0300</a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+                <ul class="list-unstyled mb-0" style="text-align: left;">
+                  <li>
+                    <a href="https://www.google.com/maps/@-22.7556347,-47.3547927,3a,90y,66.08h,87.35t/data=!3m7!1e1!3m5!1smnjqDYz_l5vB69oEhotzEg!2e0!6shttps:%2F%2Fstreetviewpixels-
+                    pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.649253731343279%26panoid%3DmnjqDYz_l5vB69oEhotzEg%26yaw%3D66.07745766169155!7i16384!8i8192?coh=205410&entry=ttu"
+                      target="_blank" class="text-color">
+                      Americana - São Paulo
+                    </a>
+                  </li>
+                  <li class="texto-grande">Rua Itabirito, N° 1227</li>
+                  <li class="texto-grande">Segunda a Sexta das</li>
+                  <li class="texto-grande">  8h às 11h - 12h às 17h</li>
+                  <li class="texto-grande">Sábado das 9h às 13h</li>
+                  <li class="texto-grande">Tel: +55 (19) 3013-2931</li>
+                </ul>
+              </div>
+   
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+                <ul class="list-unstyled mb-0" style="text-align: left;">
+                  <li>
+                    
+                    <a href="https://maps.app.goo.gl/aiiM5UwqBHwJTrXD9" target="_blank" class="text-color">
+                      Ceasa Campinas - São Paulo
+                    </a>
+                  </li>
+                  <li class="texto-grande">Box números N18 e N19</li>
+                  <li class="texto-grande">De Segunda-feira à Quinta-feira</li>
+                  <li class="texto-grande">Tel: +55 (19) 3746-1929</li>
+                </ul>
+              </div>
+   
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+                <ul class="list-unstyled mb-0" style="text-align: left;">
+                  <li>
+                    <a href="https://maps.app.goo.gl/aiiM5UwqBHwJTrXD9" target="_blank"
+                      class="text-color">
+                      Holambra - São Paulo
+                    </a>
+                  </li>
+                  <li class="texto-grande">Sítio Santa Terezinha 
+                  </li>
+                  <li class="texto-grande">Tel: +55 (19) 99781-8455</li>
+                </ul>
+
+              </div>       
+            </div>
+
+          </section>
+        </div>
+        <div class="cabeçalho-inferior">
+          <a style="color: rgb(255, 255, 255); text-decoration: none; font-size: 15px;">© 2024 Copyright: Flora Ypê.
+            Todos os direitos reservados. Site desenvolvido pelo: PITU</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+  
+  </html>

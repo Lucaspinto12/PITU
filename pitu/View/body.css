@@ -32,12 +32,7 @@ main {
 
 footer {
     background-color: rgb(56, 82, 49);
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
 }
 
 .text-termo {
